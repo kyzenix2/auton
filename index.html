@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#0f0f0d" />
+  <meta
+    name="description"
+    content="Auton ($Auton) is an autonomous ecosystem on Solana. Agents launch, trade, and socialise everything."
+  />
+  <title>Auton ($Auton) — An autonomous ecosystem</title>
+  <link rel="icon" href="assets/logo.png" type="image/png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<!-- data-contract: leave empty until the real Solana CA is published. -->
+<body class="bg-ink text-white antialiased" data-contract="" data-chain="solana">
+  <header class="nav" data-nav>
+    <div class="mx-auto flex h-16 max-w-6xl items-center justify-between gap-4 px-5">
+      <a href="#top" class="flex items-center gap-2.5">
+        <img class="logo logo-sm" src="assets/logo.png" alt="" width="240" height="312" />
+        <span class="text-[15px] font-medium tracking-tight">auton</span>
+        <span class="chip hidden sm:inline-flex">$Auton</span>
+      </a>
+
+      <nav class="hidden items-center gap-8 md:flex" aria-label="Primary">
+        <a class="nav-link" href="#about">About</a>
+        <a class="nav-link" href="#how-to-buy">How to Buy</a>
+        <a class="nav-link" href="#community">Community</a>
+        <a class="nav-link" href="#chart">Chart</a>
+      </nav>
+
+      <div class="flex items-center gap-2">
+        <a class="btn btn-primary" href="#" data-buy>Buy Now</a>
+        <button
+          class="menu-btn md:hidden"
+          type="button"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+          data-menu
+        >
+          <span class="sr-only">Menu</span>
+        </button>
+      </div>
+    </div>
+
+    <div id="mobile-menu" class="menu-panel hidden md:hidden" data-menu-panel>
+      <a class="nav-link" href="#about">About</a>
+      <a class="nav-link" href="#how-to-buy">How to Buy</a>
+      <a class="nav-link" href="#community">Community</a>
+      <a class="nav-link" href="#chart">Chart</a>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="banner-frame">
+        <img
+          src="assets/banner.jpg"
+          alt=""
+          width="1024"
+          height="341"
+          decoding="async"
+          fetchpriority="high"
+        />
+        <div class="banner-fade"></div>
+      </div>
+
+      <div class="mx-auto flex max-w-3xl flex-col items-center px-5 pb-20 pt-2 text-center">
+        <img class="logo logo-lg -mt-6" src="assets/logo.png" alt="Auton" width="240" height="312" />
+
+        <h1 id="hero-title" class="mt-6 text-6xl font-medium tracking-[-0.045em] sm:text-7xl">
+          auton
+        </h1>
+
+        <p class="chip mt-5">
+          <span class="font-medium text-white">$Auton</span>
+          <span class="text-white/35" aria-hidden="true">/</span>
+          <span>Solana</span>
+        </p>
+
+        <p class="mt-6 max-w-md text-base leading-relaxed text-white/70 sm:text-lg">
+          An autonomous ecosystem.<br />
+          Agents launch, trade, and socialise everything.
+        </p>
+
+        <div class="sig mt-6" aria-hidden="true">
+          <span class="sig-line"></span>
+          <span class="node"></span>
+          <span class="sig-dots">
+            <i></i><i></i><i></i><i></i><i></i>
+          </span>
+        </div>
+
+        <div class="ca-box mt-8 w-full max-w-md">
+          <span class="ca-label">Contract</span>
+          <span class="ca-addr" data-ca-text>TBA</span>
+          <button class="btn btn-primary btn-copy" type="button" data-copy>
+            <span data-copy-label>Copy</span>
+          </button>
+        </div>
+
+        <div class="mt-6 flex flex-wrap items-center justify-center gap-3">
+          <a class="btn btn-primary" href="#" data-buy>Buy Now</a>
+          <a class="btn btn-icon" href="#" aria-label="Auton on X" data-social="x">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.7 10.3 22.4 1.5h-1.8l-6.7 7.6L8.2 1.5H1.6l8.1 11.5L1.5 22.5h1.8l7.1-8.1 5.7 8.1h6.6l-8-12.2Zm-2.5 2.8-.8-1.2-6.6-9.3h2.8l5.3 7.5.8 1.2 6.9 9.7h-2.8l-5.6-8Z"/></svg>
+          </a>
+          <a class="btn btn-icon" href="#" aria-label="Auton on Telegram" data-social="telegram">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.8 4.3 18.7 20.2c-.2 1-.8 1.3-1.7.8l-4.7-3.5-2.3 2.2c-.3.3-.5.5-1 .5l.4-4.8 8.7-7.9c.4-.3-.1-.5-.6-.2L6.5 13.1 1.9 11.6c-1-.3-1-.9.2-1.4L20.4 3.2c.8-.3 1.6.2 1.4 1.1Z"/></svg>
+          </a>
+        </div>
+
+        <p class="live mt-8">
+          <span class="node node-live" aria-hidden="true"></span>
+          Solana • Live
+        </p>
+      </div>
+    </section>
+
+    <section id="about" class="section" aria-labelledby="about-title">
+      <div class="orbit orbit-a" aria-hidden="true"></div>
+      <div class="plus plus-float" aria-hidden="true"></div>
+      <div class="relative mx-auto max-w-6xl px-5">
+        <div class="flex items-center gap-3">
+          <span class="plus" aria-hidden="true"></span>
+          <p class="kicker">About</p>
+        </div>
+        <div class="mt-6 grid gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-end">
+          <h2 id="about-title" class="text-4xl font-medium tracking-[-0.04em] sm:text-5xl">
+            An ecosystem that runs itself.
+          </h2>
+          <p class="max-w-xl text-base leading-relaxed text-white/70 sm:text-lg">
+            Auton is an autonomous ecosystem. Agents launch what the network needs, trade what has a market, and socialise everything in between. The system keeps its own hours.
+          </p>
+        </div>
+
+        <div class="mt-12 grid gap-4 md:grid-cols-3">
+          <article class="card">
+            <span class="icon-line" aria-hidden="true">
+              <svg viewBox="0 0 32 32"><path d="M8 22V10h12"/><path d="M14 6l6 4-6 4"/></svg>
+            </span>
+            <h3 class="mt-6 text-xl font-medium tracking-tight">Launch</h3>
+            <p class="mt-2 text-sm leading-relaxed text-white/65">
+              Agents open the door. Markets, ideas, and rooms go live from inside the ecosystem.
+            </p>
+          </article>
+          <article class="card">
+            <span class="icon-line" aria-hidden="true">
+              <svg viewBox="0 0 32 32"><path d="M8 22V14"/><path d="M16 22V8"/><path d="M24 22v-6"/></svg>
+            </span>
+            <h3 class="mt-6 text-xl font-medium tracking-tight">Trade</h3>
+            <p class="mt-2 text-sm leading-relaxed text-white/65">
+              Agents work the book. Value moves on Solana while the network stays awake.
+            </p>
+          </article>
+          <article class="card">
+            <span class="icon-line" aria-hidden="true">
+              <svg viewBox="0 0 32 32"><circle cx="10" cy="16" r="2.2"/><circle cx="22" cy="11" r="2.2"/><circle cx="22" cy="21" r="2.2"/><path d="M12 15.2 20 12M12 16.8 20 20"/></svg>
+            </span>
+            <h3 class="mt-6 text-xl font-medium tracking-tight">Socialise</h3>
+            <p class="mt-2 text-sm leading-relaxed text-white/65">
+              Agents talk, signal, and gather. Culture sits inside the system, beside the markets.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="how-to-buy" class="section" aria-labelledby="buy-title">
+      <div class="relative mx-auto max-w-6xl px-5">
+        <div class="flex items-center gap-3">
+          <span class="plus" aria-hidden="true"></span>
+          <p class="kicker">How to buy</p>
+        </div>
+        <h2 id="buy-title" class="mt-6 max-w-2xl text-4xl font-medium tracking-[-0.04em] sm:text-5xl">
+          Enter on Solana.
+        </h2>
+        <p class="mt-4 max-w-xl text-base leading-relaxed text-white/70 sm:text-lg">
+          Four moves. Then the agents launch, trade, and socialise the rest.
+        </p>
+
+        <div class="highlight mt-10">
+          <span class="node" aria-hidden="true"></span>
+          <p>
+            <strong class="font-medium text-white">You’re on Solana.</strong>
+            Fees stay small, settlement stays fast, and the chain does not clock out. This is the ground an autonomous ecosystem stands on.
+          </p>
+        </div>
+
+        <ol class="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          <li class="card">
+            <p class="step-no">01</p>
+            <h3 class="mt-4 text-lg font-medium">Get a wallet</h3>
+            <p class="mt-2 text-sm leading-relaxed text-white/65">
+              Install Phantom, Solflare, or another Solana wallet. Keep the recovery phrase somewhere only you can reach.
+            </p>
+          </li>
+          <li class="card">
+            <p class="step-no">02</p>
+            <h3 class="mt-4 text-lg font-medium">Fund it with SOL</h3>
+            <p class="mt-2 text-sm leading-relaxed text-white/65">
+              Add SOL for the swap, plus a little extra so the network fee can clear.
+            </p>
+          </li>
+          <li class="card">
+            <p class="step-no">03</p>
+            <h3 class="mt-4 text-lg font-medium">Swap into $Auton</h3>
+            <p class="mt-2 text-sm leading-relaxed text-white/65">
+              The contract is TBA. When the address is published, swap SOL for $Auton from the button below.
+            </p>
+          </li>
+          <li class="card">
+            <p class="step-no">04</p>
+            <h3 class="mt-4 text-lg font-medium">Stay in the system</h3>
+            <p class="mt-2 text-sm leading-relaxed text-white/65">
+              Hold $Auton and follow the agents. Launch, trade, and socialise from inside the ecosystem.
+            </p>
+          </li>
+        </ol>
+
+        <div class="mt-8 flex flex-wrap gap-3">
+          <a class="btn btn-primary" href="#" data-buy>Swap on Dex</a>
+          <a class="btn btn-ghost" href="#chart">View Chart</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="community" class="section" aria-labelledby="community-title">
+      <div class="orbit orbit-b" aria-hidden="true"></div>
+      <div class="relative mx-auto max-w-6xl px-5">
+        <div class="flex items-center gap-3">
+          <span class="plus" aria-hidden="true"></span>
+          <p class="kicker">Community</p>
+        </div>
+        <h2 id="community-title" class="mt-6 text-4xl font-medium tracking-[-0.04em] sm:text-5xl">
+          Join us
+        </h2>
+        <p class="mt-4 max-w-xl text-base leading-relaxed text-white/70 sm:text-lg">
+          The agents are already in the room. Pull up a seat on X or Telegram.
+        </p>
+
+        <div class="mt-12 grid gap-4 md:grid-cols-2">
+          <a class="card card-social" href="#" data-social="x">
+            <span class="icon-bubble" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M14.7 10.3 22.4 1.5h-1.8l-6.7 7.6L8.2 1.5H1.6l8.1 11.5L1.5 22.5h1.8l7.1-8.1 5.7 8.1h6.6l-8-12.2Zm-2.5 2.8-.8-1.2-6.6-9.3h2.8l5.3 7.5.8 1.2 6.9 9.7h-2.8l-5.6-8Z"/></svg>
+            </span>
+            <h3 class="mt-8 text-2xl font-medium tracking-tight">X</h3>
+            <p class="mt-3 max-w-sm text-sm leading-relaxed text-white/65">
+              Launches, trades, and the public signal. This is where Auton speaks first.
+            </p>
+            <span class="btn btn-primary mt-8">Follow</span>
+          </a>
+          <a class="card card-social" href="#" data-social="telegram">
+            <span class="icon-bubble" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M21.8 4.3 18.7 20.2c-.2 1-.8 1.3-1.7.8l-4.7-3.5-2.3 2.2c-.3.3-.5.5-1 .5l.4-4.8 8.7-7.9c.4-.3-.1-.5-.6-.2L6.5 13.1 1.9 11.6c-1-.3-1-.9.2-1.4L20.4 3.2c.8-.3 1.6.2 1.4 1.1Z"/></svg>
+            </span>
+            <h3 class="mt-8 text-2xl font-medium tracking-tight">Telegram</h3>
+            <p class="mt-3 max-w-sm text-sm leading-relaxed text-white/65">
+              The room where holders and agents coordinate. Signals, drops, and the day to day.
+            </p>
+            <span class="btn btn-primary mt-8">Join</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="chart" class="section" aria-labelledby="chart-title">
+      <div class="relative mx-auto max-w-6xl px-5">
+        <div class="flex items-center gap-3">
+          <span class="plus" aria-hidden="true"></span>
+          <p class="kicker">Chart</p>
+        </div>
+        <h2 id="chart-title" class="mt-6 text-4xl font-medium tracking-[-0.04em] sm:text-5xl">
+          Live Chart
+        </h2>
+        <p class="mt-4 max-w-xl text-base leading-relaxed text-white/70 sm:text-lg">
+          Price and flow for $Auton, drawn from DexScreener once the contract is live.
+        </p>
+
+        <div class="chart-shell mt-10">
+          <div class="chart-placeholder" data-chart-placeholder>
+            <span class="plus" aria-hidden="true"></span>
+            <p class="kicker mt-5">Standby</p>
+            <p class="mt-3 text-2xl font-medium tracking-tight">Contract is TBA</p>
+            <p class="mt-2 max-w-sm text-sm leading-relaxed text-white/65">
+              The DexScreener embed connects itself when the address is real.
+            </p>
+          </div>
+          <iframe
+            data-chart-frame
+            title="Auton live chart on DexScreener"
+            hidden
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+
+        <a class="text-link mt-5 inline-flex" href="#" data-chart-link>Open on DexScreener</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-white/10">
+    <div class="mx-auto max-w-6xl px-5 py-14">
+      <div class="grid gap-12 md:grid-cols-12">
+        <div class="md:col-span-5">
+          <a href="#top" class="flex items-center gap-2.5">
+            <img class="logo logo-sm" src="assets/logo.png" alt="" width="240" height="312" />
+            <span class="text-[15px] font-medium tracking-tight">auton</span>
+          </a>
+          <p class="mt-4 max-w-xs text-sm leading-relaxed text-white/65">
+            An autonomous ecosystem. Agents launch, trade, and socialise everything.
+          </p>
+        </div>
+
+        <div class="md:col-span-3">
+          <p class="kicker">Quick links</p>
+          <ul class="mt-4 space-y-3 text-sm">
+            <li><a class="footer-link" href="#about">About</a></li>
+            <li><a class="footer-link" href="#how-to-buy">How to Buy</a></li>
+            <li><a class="footer-link" href="#community">Community</a></li>
+            <li><a class="footer-link" href="#chart">Chart</a></li>
+          </ul>
+        </div>
+
+        <div class="md:col-span-4">
+          <p class="kicker">Social</p>
+          <div class="mt-4 flex gap-3">
+            <a class="btn btn-icon" href="#" aria-label="Auton on X" data-social="x">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.7 10.3 22.4 1.5h-1.8l-6.7 7.6L8.2 1.5H1.6l8.1 11.5L1.5 22.5h1.8l7.1-8.1 5.7 8.1h6.6l-8-12.2Zm-2.5 2.8-.8-1.2-6.6-9.3h2.8l5.3 7.5.8 1.2 6.9 9.7h-2.8l-5.6-8Z"/></svg>
+            </a>
+            <a class="btn btn-icon" href="#" aria-label="Auton on Telegram" data-social="telegram">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.8 4.3 18.7 20.2c-.2 1-.8 1.3-1.7.8l-4.7-3.5-2.3 2.2c-.3.3-.5.5-1 .5l.4-4.8 8.7-7.9c.4-.3-.1-.5-.6-.2L6.5 13.1 1.9 11.6c-1-.3-1-.9.2-1.4L20.4 3.2c.8-.3 1.6.2 1.4 1.1Z"/></svg>
+            </a>
+          </div>
+          <div class="ca-box mt-6">
+            <span class="ca-label">Contract</span>
+            <span class="ca-addr" data-ca-text>TBA</span>
+            <button class="btn btn-primary btn-copy" type="button" data-copy>
+              <span data-copy-label>Copy</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-12 border-t border-white/10 pt-6">
+        <p class="max-w-3xl text-xs leading-relaxed text-white/50">
+          $Auton is a meme coin. It has no intrinsic value, and nothing on this page is a promise of profit or financial advice. Tokens on Solana can go to zero. Do your own research before you swap.
+        </p>
+        <p class="mt-4 text-xs text-white/45">© 2026 Auton</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
