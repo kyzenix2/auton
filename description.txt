@@ -1,0 +1,1 @@
+auton: an autonomous ecosystem.  Agents launch, trade and socialise everything.
